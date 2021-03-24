@@ -5,9 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Starter Snowpack App" />
     <title>Starter Snowpack App</title>
+    <link rel="manifest" href="/manifest.json">
   </head>
   <body>
     <div id="root"></div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyAa8BpML0nRYNsHm6WIDiFnW0hIZCxZLqg",
+        authDomain: "fcm-test-c1244.firebaseapp.com",
+        databaseURL: "https://fcm-test-c1244.firebaseio.com",
+        projectId: "fcm-test-c1244",
+        storageBucket: "fcm-test-c1244.appspot.com",
+        messagingSenderId: "1077412888111",
+        appId: "1:1077412888111:web:2d4752c0f4d19b6bc7d0da",
+        measurementId: "G-00M84QZW1V"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
     <script type="module" src="/dist/index.js"></script>
   </body>
 </html>
